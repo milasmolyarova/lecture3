@@ -1,0 +1,165 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+div {
+    display: block;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+ul {
+    list-style: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 5px;
+}
+
+/*My Style*/
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+/*MY STYLE////////////////////////////////////////////////////////*/
+@keyframes move_opacity {
+    from {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(610px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(1220px);
+        opacity: 1;
+    }
+}
+@keyframes move_simple {
+    from {
+        transform: translateX(0px); 
+    }
+    to {
+        transform: translateX(1220px);
+    }
+}
+
+@keyframes move_rotate {
+    0% {
+        transform: translateX(0px) rotate(0deg);        
+    }
+    10% {
+        transform: translateX(122px) rotate(90deg);
+    }
+    20% {
+        transform: translateX(244px) rotate(180deg);
+    }
+    30% {
+        transform: translateX(366px) rotate(270deg);
+    }
+    40% {
+        transform: translateX(488px) rotate(360deg);
+    }
+    50% {
+        transform: translateX(610px) rotate(450deg);
+    }
+    60% {
+        transform: translateX(732px) rotate(540deg);
+    }
+    70% {
+        transform: translateX(854px) rotate(630deg);
+    }
+    80% {
+        transform: translateX(976px) rotate(720deg);
+    }
+    90% {
+        transform: translateX(1098px) rotate(810deg);
+    }
+    100% {
+        transform: translateX(1220px) rotate(900deg);
+    }
+}
+
+@keyframes move_circle {
+    0% {
+        transform: translateX(0px);
+        background-color: #00b0ff;
+    }    
+    100% {
+        transform: translateX(1220px);
+        background-color: #ffff00;
+        border-radius: 50%;
+    }
+}
+
+.cube {
+    border: 5px solid black;
+    padding: 10px;
+    margin: 40px;
+}
+
+.one,
+.two,
+.three,
+.four {
+    border: 2px solid black;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.one {
+    background-color: #00e676;
+}
+.two {
+    background-color: #ff9100;
+}
+.three {
+    background-color: #ec407a;
+}
+.four {
+    background-color: #00b0ff;
+    margin-bottom: 0;
+}
+
+.cube:hover .one {
+    animation: move_opacity 2s linear infinite alternate;
+    -webkit-animation: move_opacity 2s infinite alternate;
+}
+.cube:hover .two {
+    animation: move_simple 4s ease-in-out infinite alternate;
+    -webkit-animation: move_simple 4s ease-in-out infinite alternate;
+}
+.cube:hover .three {
+    animation: move_rotate 4s steps(20) 1s infinite alternate;
+    -webkit-animation: move_rotate 4s steps(20) 1s infinite alternate;
+}
+.cube:hover .four {
+    animation: move_circle 3s infinite alternate;
+    -webkit-animation: move_circle 3s infinite alternate;
+}
